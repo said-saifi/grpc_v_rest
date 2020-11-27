@@ -19,11 +19,11 @@ func mainGRPC(addr string) {
 	}
 
 	config := &tls.Config{}
-	cert, err := tls.LoadX509KeyPair(certFile, keyFile)
-	if err != nil {
-		log.Fatal(err)
-	}
-	config.Certificates = []tls.Certificate{cert}
+	// cert, err := tls.LoadX509KeyPair(certFile, keyFile)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// config.Certificates = []tls.Certificate{cert}
 	s := grpc.NewServer(grpc.Creds(credentials.NewTLS(config)))
 
 	RegisterInfoServerServer(s, &server{})

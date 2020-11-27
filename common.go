@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 )
 
@@ -11,9 +10,9 @@ var (
 )
 
 func init() {
-	flag.StringVar(&certFile, "cert", "test.crt", "TLS Cert File")
-	flag.StringVar(&keyFile, "key", "test.key", "TLS Key File")
-	flag.Parse()
+	//flag.StringVar(&certFile, "cert", "test.crt", "TLS Cert File")
+	//flag.StringVar(&keyFile, "key", "test.key", "TLS Key File")
+	//flag.Parse()
 }
 
 func main() {
